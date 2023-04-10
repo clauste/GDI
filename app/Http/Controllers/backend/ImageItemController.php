@@ -83,6 +83,7 @@ class ImageItemController extends Controller
      */
     public function show()
     {
+        //share API untuk public
         try {
             $imageItem = ImageItem::all();
             return response()->json($imageItem, Response::HTTP_OK);
