@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\backend\ImageItemController;
 use App\Http\Controllers\backend\UserController;
 
@@ -15,8 +16,10 @@ use App\Http\Controllers\backend\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('', [FrontController::class, 'homepage'])->name('homepage');
+Route::get('flickr', [FrontController::class, 'flickr'])->name('home.flickr');
 
-Route::get('', [CustomAuthController::class, 'dashboard'])->name('dashboard'); 
+Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard'); 
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
 Route::get('register', [CustomAuthController::class, 'registration'])->name('register-user');
