@@ -39,7 +39,7 @@
                     <span>Master Data</span>
                 </li>
                 <li class="">
-                    <a href="">
+                    <a href="{{ route('user.index') }}">
                         <i class="fa fa-user"></i>
                         <span class="menu-text">user</span>
                     </a>

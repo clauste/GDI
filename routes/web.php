@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\backend\ImageItemController;
+use App\Http\Controllers\backend\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')
 
 Route::resource('picture', ImageItemController::class)->except('show', 'destroy');
 Route::get('/picture/{id}/destroy', [ImageItemController::class, 'destroy'])->name('picture.destroy');
+
+Route::get('user', [UserController::class, 'user_index'])->name('user.index');
 
 
 //Flickr
