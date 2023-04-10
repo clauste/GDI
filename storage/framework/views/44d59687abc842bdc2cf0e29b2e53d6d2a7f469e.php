@@ -1,0 +1,1 @@
+<?php /**PATH C:\Code\xampp\htdocs\clauste\GDI\resources\views/backend/layout/footer.blade.php ENDPATH**/ ?>
